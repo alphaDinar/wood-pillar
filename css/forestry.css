@@ -1,0 +1,118 @@
+.page{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.conBox{
+    position: relative;
+    padding: 15px;
+    width: 60%;
+    height: 50%;
+}
+.swiper-slide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.swiper-slide span{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+.swiper-slide p{
+    padding: 20px;
+}
+.next, .prev{
+    top: 30%;
+    position: absolute;
+    background:white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+.next:hover , .prev:hover{
+    background: black;
+    color: white;
+    box-shadow: none;
+}
+.next{
+    right: 0;
+}
+.prev{
+    left: 0;
+}
+.lowBar{
+    height: 28%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: ghostwhite;
+}
+.box{
+    z-index: 10;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: white;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    top: -40%;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+    height: 100%;
+}
+.lowBar img{
+    width: 20%;
+    height: 100%;
+}
+@media all and (max-width:1300px){
+    .conBox{
+        width: 95%;
+    }
+}
+@media all and (max-width:900px){
+    .conBox{
+        height: 65%;
+    }
+    .swiper-slide p{
+        overflow-y: auto;
+    }
+    .box{
+        position: revert;
+    }
+    .box img{
+        width: 35%;
+    }
+}
+@media all and (max-width:700px){
+    .page{
+        flex-direction: column-reverse;
+    }
+    .conBox{
+        height: 85%;
+    }
+}
+@media all and (max-height:700px){
+    .conBox{
+        height: 95%;
+    }
+    .box{
+        position: revert;
+    }
+    .box img{
+        width: 35%;
+    }
+}

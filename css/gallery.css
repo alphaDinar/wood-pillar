@@ -1,0 +1,108 @@
+.page{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    justify-content: center;
+    padding: 5px 0;
+    height: 88%;
+    background: black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.gallery .box{
+    overflow: hidden;
+    width: 32.5%;
+    height: 100%;
+}
+.gallery .box2{
+    overflow: hidden;
+    width: 66%;
+    height: 100%;
+}
+.s_boxH{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 99.5%; 
+    height: 99.5%;
+}
+.sTop{
+    display: flex;
+    justify-content: space-around;
+    width: 99.5%;
+    height: 40.5%;
+}
+.sLow{
+    display: flex;
+    justify-content: space-around;
+    width: 99.5%;
+    height: 56.5%;   
+}
+.gallery div img{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+}
+.gallery div img:hover{
+    transform: scale(1.1);
+}
+#g_tag{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    position: absolute;
+    background: black;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    top: 50%;
+    left: -6%;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    transform: rotate(-90deg);
+}
+@media all and (max-width:1200px){
+    .gallery{
+        width: 98%;
+    }
+}
+@media all and (max-width:800px){
+    #g_tag{
+        position: revert;
+        top: -6%;
+        left: 50%;
+        transform: rotate(360deg);
+    }
+    .page{
+        height: 120vh;
+    }
+    .gallery{
+        margin-top: 10px;
+        background: transparent;
+        width: 99%;
+        height: 100%;
+    }
+    .sTop, .sLow{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .gallery .sTop .box, .gallery .sLow .box , .gallery .sLow .box2{
+        width: 40%;
+        height: 49%;
+    }
+}
+@media all and (max-height:700px){
+    .gallery{
+        width: 98%;
+    }
+}

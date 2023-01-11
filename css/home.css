@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Commissioner&family=Martel+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+#menu{
+    display: none;
+    position: fixed;
+    top: 1vh;
+    left: 1vh;
+    z-index: 25;
+    font-size: 2.5rem;
+    padding: 5px;
+    border-radius: 10px;
+    color:#3dc0f0;
+}
+.menuList{
+    position: fixed;
+    top: 10vh;
+    left: -150px;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    background: white;
+    z-index: 25;
+    transition: 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.menuList.change{
+    left: 0;
+}
+.menuList a{
+    border-bottom: 1px solid transparent;
+    color: black;
+    letter-spacing: 1px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    transition: 0.3s ease;
+}
+.menuList a:hover{
+    border-bottom: 1px solid black;
+}
+.menuList span{
+    color: #3dc0f0;
+}
+.navBar{
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: rgb(31, 31, 31);
+}
+.nav_top{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    height: 5vh;
+}
+.nav_top .mail{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 0 10px 0 10px;
+    font-family: 'Baloo 2', cursive;
+}
+.nav_top .mail i{
+    margin: 0 5px 0 5px;
+    font-size: 1.5rem;
+}
+.nav_top .social{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+}
+.nav_top .social a{
+    font-size: 1.5rem;
+    color: white;
+}
+.nav_low{
+    display: flex;
+    justify-content: flex-end;
+    height: 10vh;
+    background: rgb(31, 31, 31);
+}
+.nav_left{
+    top: 0;
+    top: 20%;
+    left: 0;
+    position: absolute;
+    font-family: 'Baloo 2',cursive;
+    width: 20%;
+    height: 60%;
+    display: grid;
+    place-items: center;
+    background: white;
+}
+.nav_right{
+    font-family: 'Baloo 2',cursive;
+    width: 20%;
+    height: 100%;
+    display: none;
+    place-items: center;
+    background: white;
+}
+.nav_left img{
+    height: 80%;
+    width: 80%;
+}
+.nav_main{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav_main.change{
+    width: 50%;
+}
+.nav_main a, .nav_main div{
+    font-family: 'Baloo 2',cursive;
+    font-size: 0.95rem;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    color: white;
+}
+.nav_main a:hover{
+    background: #809a7a;
+    color: white;
+}
+.nav_main span{
+    cursor: pointer;
+    color: wheat;
+}
+.nav_main span:hover{
+    transition: 0.2s ease;
+    color: white;
+}
+#swiper{
+    height: 100%;
+    width: 100%;
+}
+.dropTop{
+    top: -15vh;
+    position: fixed;
+    width: 100%;
+    height: 20vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 0.4s ease;
+}
+.dropTop.change{
+    top: 15vh;
+}
+.dropTop .info{
+    color: white;
+    height: 100%;
+    width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+.dropTop .info span, .dropTopII .info span{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    border-bottom: 1px solid white;
+}
+.dropTop .info p, .dropTopII .info p{
+    font-family: 'Baloo 2',cursive;
+}
+.dropTop .social a, .dropTopII .social a{
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+.dropTop .social a:hover, .dropTopII .social a:hover{
+    font-size: 1.5rem;
+}
+.dropTopII{
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 20;
+    transition: 0.5s ease;
+    position: fixed;
+    display: none;
+}
+.nav_low #about{
+    position: relative;
+    color: white;
+}
+.nav_low #about:hover ul{
+    opacity: 1;
+}
+ul{
+    left: -100%;
+    bottom: -80px;
+    position: absolute;
+    opacity: 0;
+    background: black;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 5px;
+    list-style: none;
+    transition: 0.3s ease;
+}
+ul li{
+    padding: 5px;
+}
+
+
+@media all and (max-width:760px){
+    #menu{
+        display: flex;
+    }
+    .menuList{
+        display: flex;
+    }
+    .nav_left{
+        height: 80%;
+        position: revert;
+    }
+    .nav_low{
+        justify-content: center;
+        align-items: center;
+    }
+    .navBar{
+        height: 10vh;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .nav_top{
+        display: none;
+    }
+    .dropTop{
+        display: none;
+    }
+    .dropTopII{
+        padding: 10px 0 10px 0;
+        flex-direction: column;
+        width: 50%;
+        right: -400px;
+        height: auto;
+        top: 10vh;
+        z-index: 25;
+        display: flex;
+        text-align: center;
+        align-items: center;
+    }
+    .dropTopII.changeII{
+        right: 0;
+    }
+    .dropTopII .info{
+        color: white;
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+    }
+    .dropTopII .info div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .dropTopII .social{
+        color: white;
+        width: 70%;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    .nav_left{
+        width: auto;
+    }
+    .nav_main{
+        display: none;
+    }
+}
